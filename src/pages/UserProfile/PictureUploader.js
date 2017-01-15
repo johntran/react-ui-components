@@ -51,13 +51,11 @@ class PictureUploader extends Component {
         <Dropzone
           className={pictureUrl ? hasImage : emptyString}
           onDrop={this.onDrop}>
-          <DropzoneContent
-            {
+          <DropzoneContent {
             ...{
               pictureUrl,
             }
-          }
-          />
+          }/>
         </Dropzone>
         { pictureUrl ?
           <Flex
