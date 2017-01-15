@@ -20,6 +20,7 @@ const emptyString = '';
 class PictureUploader extends Component {
   static propTypes = {
     pictureUrl: PropTypes.string,
+    sheet: PropTypes.object,
   }
   static defaultProps = {
     pictureUrl: '',

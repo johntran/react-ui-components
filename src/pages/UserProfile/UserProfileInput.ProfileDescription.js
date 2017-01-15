@@ -19,8 +19,7 @@ const textFieldStyle = {
 };
 
 const UserProfileInputProfileDescription = () => (
-  <UserProfileInputRow
-    {
+  <UserProfileInputRow {
       ...{
         labelStyle,
       }
@@ -31,9 +30,7 @@ const UserProfileInputProfileDescription = () => (
       multiLine
       rows={2}
       fullWidth
-      {
-        ...textFieldStyle
-      }
+      { ...textFieldStyle }
     />
   </UserProfileInputRow>
 );

@@ -20,8 +20,7 @@ const textFieldStyle = {
 }
 
 const UserProfileInputProfilePicture = ({ pictureUrl }) => (
-  <UserProfileInputRow
-    {
+  <UserProfileInputRow {
       ...{
         labelStyle,
       }
