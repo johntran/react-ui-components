@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField';
 import {muiTheme} from 'storybook-addon-material-ui';
 
 import Welcome from './Welcome';
-import UserProfileInputRow from '../pages/UserProfile/UserProfileInputRow';
+import UserProfilePage from '../pages/UserProfile/UserProfilePage';
 import UserProfileInputProfileDescription from '../pages/UserProfile/UserProfileInput.ProfileDescription';
 import UserProfileInputProfilePicture from '../pages/UserProfile/UserProfileInput.ProfilePicture';
 storiesOf('Welcome', module)
@@ -14,6 +14,9 @@ storiesOf('Welcome', module)
 
 storiesOf('User Profile', module)
   .addDecorator(muiTheme())
+  .add('User Profile Page', () => (
+    <UserProfilePage/>
+  ))
   .add('Profile Description', () => (
     <UserProfileInputProfileDescription/>
   ))

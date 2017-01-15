@@ -9,6 +9,11 @@ const styles = {
   rowTitle: {
     fontWeight: 'bold',
     font,
+    width: '30%',
+    padding: '0 50px',
+  },
+  rowContent: {
+    width: '50%',
   },
   rowContainer: {
     maxWidth: '800px',
@@ -25,14 +30,18 @@ const UserProfileInputRow = ({
     classes: {
       rowTitle,
       rowContainer,
+      rowContent,
     }
   },
 }) => (
-  <Flex className={rowContainer} justify='center'>
-    <Box className={rowTitle} col={3} style={labelStyle}>
+  <Flex
+    className={rowContainer}>
+    <Box
+      className={rowTitle}
+      style={labelStyle}>
       {title}
     </Box>
-    <Box col={6}>
+    <Box className={rowContent}>
       {children}
     </Box>
   </Flex>
