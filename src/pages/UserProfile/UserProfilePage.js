@@ -21,11 +21,12 @@ const styles = {
     background: '#DFDFDF',
   },
   header: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: '20px',
     ...spacing,
   },
   subtext: {
+    fontWeight: '400',
     fontSize: '16px',
     ...spacing,
   }
