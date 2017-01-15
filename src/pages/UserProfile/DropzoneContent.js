@@ -15,7 +15,12 @@ const styles = {
   emptyContentText: {
     width: '80%',
     margin: '5px 0',
-  }
+  },
+  imageContent: {
+    maxWidth: '200px',
+    maxHeight: '200px',
+    cursor: 'pointer',
+  },
 }
 
 const textColumn = [
@@ -30,6 +35,7 @@ const DropzoneContent = ({
     classes: {
       emptyContent,
       emptyContentText,
+      imageContent,
     }
   }
 }) => {
@@ -51,7 +57,7 @@ const DropzoneContent = ({
     )
   }
   return (
-    <img src={pictureUrl} />
+    <img src={pictureUrl} className={imageContent} />
   )
 }
 

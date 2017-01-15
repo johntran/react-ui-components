@@ -20,6 +20,11 @@ storiesOf('User Profile', module)
   .add('Picture Profile: empty', () => (
     <UserProfileInputProfilePicture/>
   ))
+  .add('Profile Picture: has picture', () => (
+    <UserProfileInputProfilePicture
+      pictureUrl={'http://runmyrobot.com/images/thumbnails/11467183.jpg'}
+    />
+  ))
 
 
 // storiesOf('')

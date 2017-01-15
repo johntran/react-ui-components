@@ -19,7 +19,7 @@ const textFieldStyle = {
   },
 }
 
-const UserProfileInputProfilePicture = () => (
+const UserProfileInputProfilePicture = ({ pictureUrl }) => (
   <UserProfileInputRow
     {
       ...{
@@ -27,7 +27,11 @@ const UserProfileInputProfilePicture = () => (
       }
     }
     title='Update Profile Picture'>
-      <PictureUploader/>
+      <PictureUploader {
+        ...{
+          pictureUrl,
+        }
+      }/>
   </UserProfileInputRow>
 )
 
