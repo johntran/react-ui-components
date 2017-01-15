@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react'
-import injectSheet from 'react-jss'
-import TextField from 'material-ui/TextField';
+import React, { PropTypes } from 'react';
+import injectSheet from 'react-jss';
 import { Flex, Box } from 'reflexbox';
 
 import { font, backgroundGrey } from '../../global/consts';
@@ -20,7 +19,7 @@ const styles = {
     background: backgroundGrey,
     padding: '36px 0',
   },
-}
+};
 
 const UserProfileInputRow = ({
   title,
@@ -31,11 +30,10 @@ const UserProfileInputRow = ({
       rowTitle,
       rowContainer,
       rowContent,
-    }
+    },
   },
 }) => (
-  <Flex
-    className={rowContainer}>
+  <Flex className={rowContainer}>
     <Box
       className={rowTitle}
       style={labelStyle}>
@@ -45,15 +43,19 @@ const UserProfileInputRow = ({
       {children}
     </Box>
   </Flex>
-)
+);
 
 UserProfileInputRow.propTypes = {
   children: PropTypes.element.isRequired,
   labelStyle: PropTypes.object,
-}
+  title: PropTypes.string,
+  sheet: PropTypes.object,
+};
 
 UserProfileInputRow.defaultProps = {
   title: 'PLEASE ENTER A TITLE',
-}
+  labelStyle: null,
+  sheet: {},
+};
 
-export default injectSheet(styles)(UserProfileInputRow)
+export default injectSheet(styles)(UserProfileInputRow);

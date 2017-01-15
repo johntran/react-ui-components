@@ -1,15 +1,14 @@
-import React, { PropTypes } from 'react'
-import injectSheet from 'react-jss'
+import React, { PropTypes } from 'react';
+import injectSheet from 'react-jss';
 import { Flex, Box } from 'reflexbox';
 import UserProfileInputProfileDescription from './UserProfileInput.ProfileDescription';
 import UserProfileInputProfilePicture from './UserProfileInput.ProfilePicture';
 
-import { font, backgroundGrey } from '../../global/consts';
+import { font } from '../../global/consts';
 
 const spacing = {
-  // width: '30%',
   padding: '0 50px',
-}
+};
 
 const styles = {
   global: {
@@ -29,8 +28,8 @@ const styles = {
     fontWeight: '400',
     fontSize: '16px',
     ...spacing,
-  }
-}
+  },
+};
 
 const UserProfilePage = ({
   sheet: {
@@ -39,8 +38,8 @@ const UserProfilePage = ({
       global,
       subtext,
       headerContainer,
-    }
-  }
+    },
+  },
 }) => (
   <Flex flexColumn className={global}>
     <Flex flexColumn className={headerContainer}>
@@ -51,9 +50,17 @@ const UserProfilePage = ({
         Update your description and profile picture
       </Box>
     </Flex>
-    <UserProfileInputProfileDescription/>
-    <UserProfileInputProfilePicture/>
+    <UserProfileInputProfileDescription />
+    <UserProfileInputProfilePicture />
   </Flex>
-)
+);
+
+UserProfilePage.propTypes = {
+  sheet: PropTypes.object,
+};
+
+UserProfilePage.defaultProps = {
+  sheet: {},
+};
 
 export default injectSheet(styles)(UserProfilePage);

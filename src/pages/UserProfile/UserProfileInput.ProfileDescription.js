@@ -1,24 +1,22 @@
-import React, { PropTypes } from 'react'
-import injectSheet from 'react-jss'
+import React from 'react';
 import TextField from 'material-ui/TextField';
-import { Flex, Box } from 'reflexbox';
 import UserProfileInputRow from './UserProfileInputRow';
 import { rmbPink } from '../../global/consts';
 
 const labelStyle = {
   margin: '12px 0 0 0',
-}
+};
 const textFieldStyle = {
   underlineFocusStyle: {
     borderColor: rmbPink,
   },
   underlineStyle: {
-    borderColor: '#000'
+    borderColor: '#000',
   },
   floatingLabelStyle: {
     color: rmbPink,
   },
-}
+};
 
 const UserProfileInputProfileDescription = () => (
   <UserProfileInputRow
@@ -27,11 +25,10 @@ const UserProfileInputProfileDescription = () => (
         labelStyle,
       }
     }
-    title='Description'
-    >
+    title="Description">
     <TextField
       id={'UserProfileInput.ProfileDescription'}
-      multiLine={true}
+      multiLine
       rows={2}
       fullWidth
       {
@@ -39,6 +36,6 @@ const UserProfileInputProfileDescription = () => (
       }
     />
   </UserProfileInputRow>
-)
+);
 
 export default UserProfileInputProfileDescription;

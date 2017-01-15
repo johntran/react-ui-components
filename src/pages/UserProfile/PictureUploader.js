@@ -1,10 +1,9 @@
-import React, { Component, PropTypes } from 'react'
-import injectSheet from 'react-jss'
-import TextField from 'material-ui/TextField';
-import { Flex, Box } from 'reflexbox';
+import React, { Component, PropTypes } from 'react';
+import injectSheet from 'react-jss';
+import { Flex } from 'reflexbox';
 import Dropzone from 'react-dropzone';
-import DropzoneContent from './DropzoneContent'
-import { font, backgroundGrey } from '../../global/consts';
+import DropzoneContent from './DropzoneContent';
+import { font } from '../../global/consts';
 
 const styles = {
   hasImage: {
@@ -13,8 +12,8 @@ const styles = {
   uploadAnother: {
     font,
     maxWidth: '200px',
-  }
-}
+  },
+};
 
 const emptyString = '';
 
@@ -29,21 +28,21 @@ class PictureUploader extends Component {
     uploadedImage: null,
     image: null,
   }
-  successfulUpload = image => this.setState({ image })
-  onDrop = files => {
+  onDrop = (files) => {
     const uploadedImage = files[0];
-    this.setState({uploadedImage})
+    this.setState({ uploadedImage });
     this.successfulUpload(uploadedImage);
   }
+  successfulUpload = image => this.setState({ image })
   render() {
     const {
       sheet: {
         classes: {
           hasImage,
           uploadAnother,
-        }
+        },
       },
-    } = this.props
+    } = this.props;
     const { image } = this.state;
     const pictureUrl = image ? image.preview : this.props.pictureUrl;
     return (
@@ -51,11 +50,13 @@ class PictureUploader extends Component {
         <Dropzone
           className={pictureUrl ? hasImage : emptyString}
           onDrop={this.onDrop}>
-          <DropzoneContent {
+          <DropzoneContent
+            {
             ...{
               pictureUrl,
             }
-          }/>
+          }
+          />
         </Dropzone>
         { pictureUrl ?
           <Flex
@@ -66,7 +67,7 @@ class PictureUploader extends Component {
           : null
         }
       </Flex>
-    )
+    );
   }
 }
 
